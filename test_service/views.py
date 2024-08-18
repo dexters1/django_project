@@ -13,6 +13,7 @@ class TaskUpdate(generics.RetrieveUpdateAPIView):
 	partial = True
 
 class TaskDetail(generics.RetrieveUpdateDestroyAPIView):
+    http_method_names = ['get']
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
 
