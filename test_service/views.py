@@ -4,13 +4,13 @@ from .serializers import TaskSerializer
 from rest_framework.response import Response
 
 class TaskList(generics.ListAPIView):
-	queryset = Task.objects.all()
-	serializer_class = TaskSerializer
+    queryset = Task.objects.all()
+    serializer_class = TaskSerializer
 
 class TaskUpdate(generics.RetrieveUpdateAPIView):
-	queryset = Task.objects.all()
-	serializer_class = TaskSerializer
-	partial = True
+    queryset = Task.objects.all()
+    serializer_class = TaskSerializer
+    partial = True
 
 class TaskDetail(generics.RetrieveUpdateDestroyAPIView):
     http_method_names = ['get']
@@ -18,8 +18,8 @@ class TaskDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = TaskSerializer
 
 class TaskCreate(generics.ListCreateAPIView):
-	queryset = Task.objects.all()
-	serializer_class = TaskSerializer
+    queryset = Task.objects.all()
+    serializer_class = TaskSerializer
 
 class TaskDelete(generics.DestroyAPIView):
     queryset = Task.objects.all()
