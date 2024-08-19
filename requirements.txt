@@ -4,3 +4,5 @@ psycopg2>=2.8
 pyyaml
 uritemplate
 drf-spectacular
+celery
+redis

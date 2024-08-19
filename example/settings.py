@@ -137,3 +137,6 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = { "TITLE": "Django DRF Test"}
+
+# Celery settings
+CELERY_BROKER_URL = 'redis://redis:6379/0'
