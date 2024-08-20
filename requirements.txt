@@ -6,3 +6,4 @@ uritemplate
 drf-spectacular
 celery
 redis
+django-cors-headers

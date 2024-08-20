@@ -41,10 +41,13 @@ INSTALLED_APPS = [
     'rest_framework',
     'test_service',
     'drf_spectacular',
+    'corsheaders',
+    'rest_framework.authtoken'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -140,3 +143,7 @@ SPECTACULAR_SETTINGS = { "TITLE": "Django DRF Test"}
 
 # Celery settings
 CELERY_BROKER_URL = 'redis://redis:6379/0'
+
+CORS_ORIGIN_WHITELIST = [
+     'http://localhost:3000',  # The default port for create-react-app
+]
